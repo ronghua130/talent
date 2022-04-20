@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Talent {
 
 	String talentName;
-	Level level;
+	Level level; //
 
 	@Id
 	@GeneratedValue
