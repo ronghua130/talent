@@ -1,5 +1,5 @@
 package com.talent.domain;
 
 public enum Level {
-  High,  Midium,  Low
+  High, Midium, Low
 }
