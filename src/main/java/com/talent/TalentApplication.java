@@ -1,11 +1,8 @@
-package com.demo.talent;
+package com.talent;
 
-
-import java.util.Date;
-
-import com.demo.talent.domain.Level;
-import com.demo.talent.domain.Repository;
-import com.demo.talent.domain.Talent;
+import com.talent.domain.Level;
+import com.talent.domain.Repository;
+import com.talent.domain.Talent;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,7 +12,8 @@ import org.springframework.context.ApplicationContext;
 public class TalentApplication {
 
 	static ApplicationContext applicationContext;
-	public static ApplicationContext getApplicationContext(){
+
+	public static ApplicationContext getApplicationContext() {
 		return applicationContext;
 	}
 
@@ -25,12 +23,13 @@ public class TalentApplication {
 		Repository repository = applicationContext.getBean(Repository.class);
 
 		Talent talent = new Talent();
-		talent.setRecentActivityDate(new Date());
-		talent.setLevel(Level.고수);
+		talent.setTalentName("피아노");
+		talent.setLevel(Level.High);
 
 		repository.save(talent);
 
-		System.out.println(talent.check잠수() == false);
+		System.out.println("talent : id=" + talent.getId() + " , talentName=" + talent.getTalentName() + " , level="
+				+ talent.getLevel());
 
 	}
 
