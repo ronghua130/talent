@@ -24,12 +24,12 @@ public class TalentApplication {
 
 		Talent talent = new Talent();
 		talent.setTalentName("피아노");
-		talent.setLevel(Level.High);
+		talent.setLevel(Level.H);
 
 		repository.save(talent);
 
 		System.out.println("talent : id=" + talent.getId() + " , talentName=" + talent.getTalentName() + " , level="
-				+ talent.getLevel());
+				+ talent.getLevel().label());
 
 	}
 
